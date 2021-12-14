@@ -1,75 +1,8 @@
 {
   "multipart": [
     {
-      "when": {
-        "OR": [
-          {
-            "east": "low|tall",
-            "north": "low|tall"
-          },
-          {
-            "east": "low|tall",
-            "south": "low|tall"
-          },
-          {
-            "west": "low|tall",
-            "south": "low|tall"
-          },
-          {
-            "west": "low|tall",
-            "north": "low|tall"
-          }
-        ]
-      },
       "apply": {
         "model": "charred:block/charcoal_wall_full"
-      }
-    },
-    {
-      "when": {
-        "up": "true"
-      },
-      "apply": {
-        "model": "charred:block/charcoal_wall_post"
-      }
-    },
-    {
-      "when": {
-        "north": "low|tall"
-      },
-      "apply": {
-        "model": "charred:block/charcoal_wall_side",
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "east": "low|tall"
-      },
-      "apply": {
-        "model": "charred:block/charcoal_wall_side",
-        "y": 90,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "south": "low|tall"
-      },
-      "apply": {
-        "model": "charred:block/charcoal_wall_side",
-        "y": 180,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "west": "low|tall"
-      },
-      "apply": {
-        "model": "charred:block/charcoal_wall_side",
-        "y": 270,
-        "uvlock": true
       }
     }
   ]

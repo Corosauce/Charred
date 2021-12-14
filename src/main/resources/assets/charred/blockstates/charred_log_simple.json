@@ -1,9 +1,0 @@
-{
-  "multipart": [
-    {
-      "apply": {
-        "model": "charred:block/charcoal_wall_post"
-      }
-    }
-  ]
-}
