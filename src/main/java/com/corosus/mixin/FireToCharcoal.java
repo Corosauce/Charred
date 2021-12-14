@@ -3,6 +3,7 @@ package com.corosus.mixin;
 import com.corosus.Charred;
 import com.corosus.CharredRegistry;
 import net.minecraft.core.BlockPos;
+import net.minecraft.tags.BlockTags;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.FireBlock;
@@ -21,8 +22,7 @@ public abstract class FireToCharcoal {
     public boolean removeBlock(Level instance, BlockPos p_46623_, boolean p_46624_) {
         //hooking code that removes the block on fire
         BlockState state = instance.getBlockState(p_46623_);
-        //state.getBlock().getTags()
-        if (state.getMaterial() == Material.WOOD) {
+        if (BlockTags.LOGS.contains(state.getBlock())) {
             return instance.setBlock(p_46623_, CharredRegistry.BLOCK_CHARRED_LOG.get().defaultBlockState(), 3 | (p_46624_ ? 64 : 0));
         } else {
             return instance.removeBlock(p_46623_, p_46624_);
@@ -35,7 +35,7 @@ public abstract class FireToCharcoal {
     public boolean setBlock(Level instance, BlockPos p_46601_, BlockState p_46602_, int p_46603_) {
         //hooking code that tries to place more fire in place of the block on fire
         BlockState state = instance.getBlockState(p_46601_);
-        if (state.getMaterial() == Material.WOOD) {
+        if (BlockTags.LOGS.contains(state.getBlock())) {
             return instance.setBlock(p_46601_, CharredRegistry.BLOCK_CHARRED_LOG.get().defaultBlockState(), p_46603_);
         } else {
             return instance.removeBlock(p_46601_, false);
