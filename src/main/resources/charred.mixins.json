@@ -1,0 +1,11 @@
+{
+  "required": true,
+  "package": "com.corosus.mixin",
+  "compatibilityLevel": "JAVA_16",
+  "refmap": "charred.refmap.json",
+  "client": ["FireToCharcoal", "StopDataFixers"],
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "minVersion": "0.8"
+}

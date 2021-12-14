@@ -1,0 +1,6 @@
+{
+  "parent": "charred:block/template_wall_post",
+  "textures": {
+    "wall": "charred:block/charred_log"
+  }
+}
