@@ -3,7 +3,7 @@
   "package": "com.corosus.mixin",
   "compatibilityLevel": "JAVA_16",
   "refmap": "charred.refmap.json",
-  "client": ["FireToCharcoal", "StopDataFixers"],
+  "client": ["FireToCharcoal"],
   "injectors": {
     "defaultRequire": 1
   },

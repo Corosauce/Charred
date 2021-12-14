@@ -18,7 +18,7 @@ public class CharredRegistry {
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, Charred.MODID);
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, Charred.MODID);
 
-    public static final RegistryObject<Block> BLOCK_CHARRED_LOG = BLOCKS.register("charred_log", () -> new CharredLogBlock(BlockBehaviour.Properties.of(Material.STONE).requiresCorrectToolForDrops().strength(3.0F, 3.0F)));
+    public static final RegistryObject<Block> BLOCK_CHARRED_LOG = BLOCKS.register("charred_log", () -> new CharredLogBlock(BlockBehaviour.Properties.of(Material.WOOD).strength(2.0F)));
     public static final RegistryObject<Item> ITEM_CHARRED_LOG = ITEMS.register("charred_log", () -> new BlockItem(CharredRegistry.BLOCK_CHARRED_LOG.get(), new Item.Properties().tab(CreativeModeTab.TAB_MATERIALS)));
 
 }
